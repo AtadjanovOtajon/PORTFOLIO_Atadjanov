@@ -29,11 +29,12 @@ const scrollActive = () =>{
 
   sections.forEach(current =>{
         const sectionHeight = current.offsetHeight,
-              sectionTop = current.offsetTop - 58,
+              sectionTop = current.offsetTop - 200,
               sectionId = current.getAttribute('id'),
               sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
         
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            console.log(sectionTop + sectionHeight)
             sectionsClass.classList.add('active-link')
         }else{
             sectionsClass.classList.remove('active-link')
